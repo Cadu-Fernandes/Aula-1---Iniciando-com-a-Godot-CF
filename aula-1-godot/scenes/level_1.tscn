@@ -1,18 +1,55 @@
 [gd_scene format=3 uid="uid://d4mhtjyo6gwbm"]
 
-[ext_resource type="Texture2D" uid="uid://b6d1itgb2g3hx" path="res://assets/chao.jpg" id="1_014kd"]
+[ext_resource type="Texture2D" uid="uid://bynbtdwddyvbl" path="res://assets/chao2.jpg" id="1_bswci"]
+[ext_resource type="Texture2D" uid="uid://cqvd1aguiuhvu" path="res://assets/background.jpg" id="1_rus8k"]
+[ext_resource type="PackedScene" uid="uid://bkn6267rdcbs7" path="res://scenes/player.tscn" id="2_bswci"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_hbghi"]
-size = Vector2(513.3215, 515.7451)
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_rus8k"]
+normal = Vector2(-0.0062463614, -0.99998045)
+distance = -0.06525597
 
 [node name="level1" type="Node2D" unique_id=1820640191]
 
-[node name="Chao" type="Sprite2D" parent="." unique_id=30295554]
-position = Vector2(315.24997, 316.24997)
-scale = Vector2(2.7977777, 2.7977777)
-texture = ExtResource("1_014kd")
+[node name="Fundo" type="StaticBody2D" parent="." unique_id=1582364032]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1137416520]
-position = Vector2(317.31116, 319.8111)
+[node name="Sprite2D" type="Sprite2D" parent="Fundo" unique_id=1844641868]
+position = Vector2(-679, 269)
+scale = Vector2(4.3531075, 4.3531075)
+texture = ExtResource("1_rus8k")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Fundo" unique_id=777687165]
+position = Vector2(556, 269)
+scale = Vector2(4.3531075, 4.3531075)
+texture = ExtResource("1_rus8k")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Fundo" unique_id=1000394213]
+position = Vector2(1790.9999, 269)
+scale = Vector2(4.3531075, 4.3531075)
+texture = ExtResource("1_rus8k")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fundo" unique_id=1237489149]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=683046526]
+
+[node name="Chao" type="Sprite2D" parent="StaticBody2D" unique_id=30295554]
+position = Vector2(-189, 487)
+scale = Vector2(2.7977777, 2.7977777)
+texture = ExtResource("1_bswci")
+
+[node name="Chao2" type="Sprite2D" parent="StaticBody2D" unique_id=487057252]
+position = Vector2(1100, 482)
+scale = Vector2(2.7977777, 2.7977777)
+texture = ExtResource("1_bswci")
+
+[node name="Chao3" type="Sprite2D" parent="StaticBody2D" unique_id=1387714058]
+position = Vector2(2404, 472.00003)
+scale = Vector2(2.7977777, 2.7977777)
+texture = ExtResource("1_bswci")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1137416520]
+position = Vector2(298.99997, 322)
 scale = Vector2(1.2377775, 1.2377775)
-shape = SubResource("RectangleShape2D_hbghi")
+shape = SubResource("WorldBoundaryShape2D_rus8k")
+
+[node name="Player" parent="." unique_id=1319570364 instance=ExtResource("2_bswci")]
+position = Vector2(244, 206)
