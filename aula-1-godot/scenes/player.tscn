@@ -18,6 +18,7 @@ texture = ExtResource("2_g2els")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2145070391]
 position = Vector2(-2.0142822, 0.49523926)
+position_smoothing_enabled = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=46873044]
 position = Vector2(-2.0142822, 1.4952393)

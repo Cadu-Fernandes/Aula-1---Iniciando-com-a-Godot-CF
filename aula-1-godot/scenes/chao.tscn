@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cfkg7pnir7s4h"]
+
+[ext_resource type="Texture2D" uid="uid://bynbtdwddyvbl" path="res://assets/chao2.jpg" id="1_5ruwd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5ruwd"]
+size = Vector2(423, 114)
+
+[node name="Chao" type="Node2D" unique_id=1760141555]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1293958635]
+texture = ExtResource("1_5ruwd")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D" unique_id=438032464]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/StaticBody2D" unique_id=692832162]
+position = Vector2(-0.5, -2)
+shape = SubResource("RectangleShape2D_5ruwd")
