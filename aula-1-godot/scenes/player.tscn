@@ -2,6 +2,58 @@
 
 [ext_resource type="Script" uid="uid://mkx4kvt76mrn" path="res://scripts/player.gd" id="1_g2els"]
 [ext_resource type="Texture2D" uid="uid://bda3c23ggwsxu" path="res://assets/kenney_platformer-art-deluxe/Base pack/Player/p3_front.png" id="2_g2els"]
+[ext_resource type="Texture2D" uid="uid://dhn5xx6h0ugo5" path="res://assets/kenney_platformer-art-deluxe/Base pack/Player/p3_walk/PNG/p3_walk01.png" id="2_jej6c"]
+[ext_resource type="Texture2D" uid="uid://kyacwslh7mf7" path="res://assets/kenney_platformer-art-deluxe/Base pack/Player/p3_walk/PNG/p3_walk02.png" id="3_f1ej7"]
+[ext_resource type="Texture2D" uid="uid://euleon5m8nd3" path="res://assets/kenney_platformer-art-deluxe/Base pack/Player/p3_walk/PNG/p3_walk03.png" id="4_oprun"]
+[ext_resource type="Texture2D" uid="uid://dylicej4kreks" path="res://assets/kenney_platformer-art-deluxe/Base pack/Player/p3_walk/PNG/p3_walk04.png" id="5_a8ls1"]
+[ext_resource type="Texture2D" uid="uid://biupbxh47ty4a" path="res://assets/kenney_platformer-art-deluxe/Base pack/Player/p3_walk/PNG/p3_walk05.png" id="6_qfm1y"]
+[ext_resource type="Texture2D" uid="uid://d0lorytgsr4k8" path="res://assets/kenney_platformer-art-deluxe/Base pack/Player/p3_walk/PNG/p3_walk06.png" id="7_fulsm"]
+[ext_resource type="Texture2D" uid="uid://b0gkk4yee6jtr" path="res://assets/kenney_platformer-art-deluxe/Base pack/Player/p3_walk/PNG/p3_walk07.png" id="8_4r5pv"]
+[ext_resource type="Texture2D" uid="uid://l3gadriv4drb" path="res://assets/kenney_platformer-art-deluxe/Base pack/Player/p3_walk/PNG/p3_walk08.png" id="9_60mlk"]
+[ext_resource type="Texture2D" uid="uid://cgkycxvtvh2dx" path="res://assets/kenney_platformer-art-deluxe/Base pack/Player/p3_walk/PNG/p3_walk09.png" id="10_i4ail"]
+[ext_resource type="Texture2D" uid="uid://bxpc4h2735jtw" path="res://assets/kenney_platformer-art-deluxe/Base pack/Player/p3_walk/PNG/p3_walk10.png" id="11_a38lo"]
+[ext_resource type="Texture2D" uid="uid://b2wryotjcnxkr" path="res://assets/kenney_platformer-art-deluxe/Base pack/Player/p3_walk/PNG/p3_walk11.png" id="12_4ni07"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_l71n6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_jej6c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_f1ej7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_oprun")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_a8ls1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_qfm1y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_fulsm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_4r5pv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_60mlk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_i4ail")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_a38lo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_4ni07")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qhqgy"]
 radius = 15.0
@@ -11,7 +63,14 @@ height = 44.0
 safe_margin = 0.001
 script = ExtResource("1_g2els")
 
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1472325541]
+position = Vector2(-2.0142822, 0.49523926)
+scale = Vector2(0.42380953, 0.42380953)
+sprite_frames = SubResource("SpriteFrames_l71n6")
+animation = &"walk"
+
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1755166711]
+visible = false
 position = Vector2(-2.0142822, 0.49523926)
 scale = Vector2(0.42380953, 0.42380953)
 texture = ExtResource("2_g2els")
