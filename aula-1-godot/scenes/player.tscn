@@ -16,6 +16,11 @@
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_l71n6"]
 animations = [{
+"frames": [],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("2_jej6c")
@@ -64,6 +69,7 @@ safe_margin = 0.001
 script = ExtResource("1_g2els")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1472325541]
+texture_filter = 1
 position = Vector2(-2.0142822, 0.49523926)
 scale = Vector2(0.42380953, 0.42380953)
 sprite_frames = SubResource("SpriteFrames_l71n6")
