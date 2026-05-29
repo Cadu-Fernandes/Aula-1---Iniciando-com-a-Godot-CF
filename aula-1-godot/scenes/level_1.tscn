@@ -1,10 +1,9 @@
-[gd_scene format=3 uid="uid://d4mhtjyo6gwbm"]
+[gd_scene format=4 uid="uid://d4mhtjyo6gwbm"]
 
 [ext_resource type="PackedScene" uid="uid://bkn6267rdcbs7" path="res://scenes/player.tscn" id="2_bswci"]
 [ext_resource type="Texture2D" uid="uid://frhctqdibdyd" path="res://assets/kenney_platformer-art-deluxe/Base pack/Tiles/tiles_spritesheet.png" id="3_5xbjy"]
-[ext_resource type="PackedScene" uid="uid://cfkg7pnir7s4h" path="res://scenes/chao.tscn" id="3_rus8k"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4nkto"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rus8k"]
 texture = ExtResource("3_5xbjy")
 separation = Vector2i(2, 2)
 texture_region_size = Vector2i(70, 70)
@@ -315,6 +314,7 @@ texture_region_size = Vector2i(70, 70)
 5:6/0 = 0
 6:6/0 = 0
 7:6/0 = 0
+7:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-35, -35, 35, -35, 35, 35, -35, 35)
 9:6/0 = 0
 10:6/0 = 0
 11:6/0 = 0
@@ -364,6 +364,7 @@ texture_region_size = Vector2i(70, 70)
 5:7/0 = 0
 6:7/0 = 0
 7:7/0 = 0
+7:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-35, -35, 35, -35, 35, 35, -35, 35)
 13:7/0 = 0
 14:7/0 = 0
 15:7/0 = 0
@@ -412,6 +413,7 @@ texture_region_size = Vector2i(70, 70)
 5:8/0 = 0
 6:8/0 = 0
 7:8/0 = 0
+7:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-35, -35, 35, -35, 35, 35, -35, 35)
 13:8/0 = 0
 14:8/0 = 0
 15:8/0 = 0
@@ -457,6 +459,7 @@ texture_region_size = Vector2i(70, 70)
 4:9/0 = 0
 6:9/0 = 0
 7:9/0 = 0
+7:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-35, -35, 35, -35, 35, 35, -35, 35)
 9:9/0 = 0
 10:9/0 = 0
 11:9/0 = 0
@@ -500,6 +503,7 @@ texture_region_size = Vector2i(70, 70)
 5:10/0 = 0
 6:10/0 = 0
 7:10/0 = 0
+7:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-35, -35, 35, -35, 35, 35, -35, 35)
 9:10/0 = 0
 10:10/0 = 0
 11:10/0 = 0
@@ -2863,26 +2867,43 @@ texture_region_size = Vector2i(70, 70)
 52:57/0 = 0
 53:57/0 = 0
 54:57/0 = 0
+8:7/0 = 0
+8:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-35, -35, 35, -35, 35, 35, -35, 35)
+8:8/0 = 0
+8:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-35, -35, 35, -35, 35, 35, -35, 35)
+8:9/0 = 0
+8:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-35, -35, 35, -35, 35, 35, -35, 35)
+8:10/0 = 0
+8:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-35, -35, 35, -35, 35, 35, -35, 35)
+8:11/0 = 0
+8:12/0 = 0
+9:8/0 = 0
+10:8/0 = 0
+10:12/0 = 0
+9:12/0 = 0
+9:7/0 = 0
+10:7/0 = 0
+11:7/0 = 0
+11:8/0 = 0
+5:9/0 = 0
+8:5/0 = 0
+8:6/0 = 0
+8:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-35, -35, 35, -35, 35, 35, -35, 35)
+9:3/0 = 0
+10:3/0 = 0
+11:3/0 = 0
 
-[sub_resource type="TileSet" id="TileSet_fcfvj"]
-sources/2 = SubResource("TileSetAtlasSource_4nkto")
+[sub_resource type="TileSet" id="TileSet_5xbjy"]
+tile_size = Vector2i(70, 70)
+physics_layer_0/collision_layer = 1
+sources/2 = SubResource("TileSetAtlasSource_rus8k")
 
 [node name="level1" type="Node2D" unique_id=1820640191]
 
 [node name="Player" parent="." unique_id=1319570364 instance=ExtResource("2_bswci")]
 position = Vector2(-402, 275)
 
-[node name="Chao1" parent="." unique_id=1760141555 instance=ExtResource("3_rus8k")]
-position = Vector2(-493, 377)
-
-[node name="Chao2" parent="." unique_id=1111772173 instance=ExtResource("3_rus8k")]
-position = Vector2(-1, 374)
-
-[node name="Chao3" parent="." unique_id=80772388 instance=ExtResource("3_rus8k")]
-position = Vector2(495, 381)
-
-[node name="Chao4" parent="." unique_id=1593469860 instance=ExtResource("3_rus8k")]
-position = Vector2(977, 374)
-
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1820496066]
-tile_set = SubResource("TileSet_fcfvj")
+position = Vector2(-7, 8)
+tile_map_data = PackedByteArray("AAD3/wQAAgAHAAkAAAD4/wQAAgAHAAgAAAD5/wQAAgAHAAgAAAD6/wQAAgAHAAgAAAD7/wQAAgAHAAgAAAD8/wQAAgAHAAgAAAD9/wQAAgAHAAcAAAD//wMAAgAHAAkAAAAAAAMAAgAHAAgAAAABAAMAAgAHAAgAAAACAAMAAgAHAAcAAAAEAAUAAgAHAAkAAAAFAAUAAgAHAAgAAAAGAAUAAgAHAAcAAAA=")
+tile_set = SubResource("TileSet_5xbjy")
